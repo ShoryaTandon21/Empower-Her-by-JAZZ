@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wellness Coaching</title>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#1c1c1c;
+  --muted:#6b6b6b;
+  --primary:#6C63FF;
+  --secondary:#00C2FF;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:1s ease;
+}
+
+.hero img.active{
+  opacity:1;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(246,247,251,0.95));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:20px;
+}
+
+/* PREMIUM TAGLINE */
+.tagline{
+  font-size:13px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:white;
+  font-weight:800;
+  margin-bottom:12px;
+  display:inline-block;
+  animation:fadeIn 1s ease;
+}
+
+.tagline span{
+  color:#00C2FF;
+  font-weight:900;
+  letter-spacing:6px;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(-10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.hero h1{
+  font-size:3rem;
+  color:white;
+}
+
+.hero p{
+  margin-top:10px;
+  color:#f1f1f1;
+}
+
+/* SECTION */
+.section{
+  padding:70px 10%;
+}
+
+.title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:40px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:12px;
+  text-align:center;
+}
+
+/* BOOKING */
+.booking-wrapper{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+.booking{
+  flex:1;
+  min-width:280px;
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.booking input,
+.booking textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ddd;
+  border-radius:10px;
+  outline:none;
+}
+
+.booking button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 16px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.popup{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  display:none;
+}
+
+</style>
+</head>
+<body>
+
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
+
+<div class="popup" id="popup">Booking Successful ✅</div>
+
+<!-- HERO -->
+<div class="hero">
+<div class="overlay"></div>
+
+<img src="https://picsum.photos/1600/900?1" class="active">
+<img src="https://picsum.photos/1600/900?2">
+<img src="https://picsum.photos/1600/900?3">
+
+<div class="hero-content">
+
+<div class="tagline">Empower Her by <span>JAZZ</span></div>
+
+<h1>Transform Your Lifestyle</h1>
+<p>Women Wellness & Coaching Platform</p>
+
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="https://picsum.photos/400/300?10">
+<h3>Personal Training</h3>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?11">
+<h3>Weight Loss</h3>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?12">
+<h3>Diet Planning</h3>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?13">
+<h3>Online Coaching</h3>
+</div>
+
+</div>
+</div>
+
+<!-- BOOKING -->
+<div class="section">
+<h2 class="title">Book Session</h2>
+
+<div class="booking-wrapper">
+
+<div class="booking">
+<input id="name" placeholder="Name" />
+<input id="email" placeholder="Email" />
+<textarea id="goal" placeholder="Your Goal"></textarea>
+<button onclick="payNow()">Pay & Book ₹499</button>
+</div>
+
+</div>
+</div>
+
+<script>
+let slides=document.querySelectorAll('.hero img');
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+
+function payNow(){
+
+const name=document.getElementById("name").value;
+const email=document.getElementById("email").value;
+const goal=document.getElementById("goal").value;
+
+if(!name||!email||!goal){alert("Fill all fields");return;}
+
+const options={
+key:"rzp_test_SiSYqtmRzqf664",
+amount:49900,
+currency:"INR",
+name:"Wellness Coaching",
+handler:function(){
+
+const popup=document.getElementById("popup");
+popup.style.display="block";
+setTimeout(()=>popup.style.display="none",2500);
+
+}
+};
+
+const rzp=new Razorpay(options);
+rzp.open();
+
+}
+</script>
+
+</body>
+</html>
