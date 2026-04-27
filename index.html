@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Empower Her by Jazz</title>
-
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <style>
 :root{
-  --bg:#f8f9fd;
-  --card:#ffffff;
-  --text:#1c1c1c;
+  --bg:#f7f8fc;
+  --glass:rgba(255,255,255,0.25);
+  --border:rgba(255,255,255,0.3);
+  --text:#1a1a1a;
   --primary:#8E7CFF;
   --secondary:#FF9ECF;
 }
@@ -19,8 +19,9 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:var(--bg);color:var(--text);}
 
+/* HERO */
 .hero{
-  height:90vh;
+  height:100vh;
   position:relative;
   overflow:hidden;
   display:flex;
@@ -28,36 +29,35 @@ body{background:var(--bg);color:var(--text);}
   justify-content:center;
   text-align:center;
 }
-
 .hero img{
-  position:absolute;
-  width:100%;height:100%;
-  object-fit:cover;
-  opacity:0;
-  transition:1s ease;
+  position:absolute;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:1s;
 }
 .hero img.active{opacity:1;}
-
 .overlay{
   position:absolute;width:100%;height:100%;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(248,249,253,0.95));
+  background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(247,248,252,0.95));
 }
-
 .hero-content{position:relative;z-index:2;}
 
 .tagline{
-  font-size:14px;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  color:white;
-  font-weight:800;
+  color:#fff;font-weight:800;letter-spacing:5px;font-size:14px;
 }
 .tagline span{color:#FF9ECF;}
 
-.hero h1{font-size:3rem;color:white;margin-top:10px;}
+.hero h1{color:white;font-size:3rem;margin-top:10px;}
 .hero p{color:#eee;margin-top:10px;}
 
-.section{padding:70px 10%;}
+/* GLASS CARD */
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  border-radius:20px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.1);
+}
+
+.section{padding:80px 10%;}
 .title{text-align:center;font-size:2rem;margin-bottom:40px;}
 
 .services{
@@ -65,87 +65,86 @@ body{background:var(--bg);color:var(--text);}
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
 }
-
 .card{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 15px 30px rgba(0,0,0,0.05);
-  transition:.3s;
+  overflow:hidden;transition:.3s;
 }
 .card:hover{transform:translateY(-8px);}
-.card img{width:100%;height:160px;object-fit:cover;}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:20px 20px 0 0;}
 .card h3{text-align:center;padding:15px;}
 
 .booking{
-  max-width:400px;
-  margin:auto;
-  background:white;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  max-width:420px;margin:auto;padding:30px;
 }
-
 .booking input,.booking textarea{
-  width:100%;padding:12px;margin:10px 0;
-  border:1px solid #ddd;border-radius:10px;
+  width:100%;padding:12px;margin:10px 0;border:none;border-radius:10px;
 }
-
 .booking button{
   width:100%;padding:14px;border:none;border-radius:12px;
   background:linear-gradient(90deg,var(--primary),var(--secondary));
   color:white;font-weight:bold;cursor:pointer;
 }
 
+.qr{text-align:center;}
+.qr img{border-radius:15px;margin-top:10px;}
+
 .whatsapp{
   position:fixed;bottom:20px;right:20px;
-  background:#25D366;color:white;padding:14px;
-  border-radius:50px;text-decoration:none;
+  background:#25D366;color:white;padding:14px;border-radius:50px;text-decoration:none;
 }
 
 .popup{
-  position:fixed;top:20px;right:20px;
-  background:white;padding:15px;border-radius:10px;
-  display:none;
+  position:fixed;top:20px;right:20px;background:white;padding:15px;border-radius:10px;display:none;
 }
 </style>
 </head>
 <body>
 
-<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">Chat</a>
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
 <div class="popup" id="popup">Booking Successful ✅</div>
 
+<!-- HERO -->
 <div class="hero">
 <div class="overlay"></div>
-
-<img src="https://picsum.photos/1600/900?woman,fitness" class="active">
-<img src="https://picsum.photos/1600/900?yoga,woman">
-<img src="https://picsum.photos/1600/900?wellness,women">
+<img src="https://picsum.photos/1600/900?woman" class="active">
+<img src="https://picsum.photos/1600/900?yoga">
+<img src="https://picsum.photos/1600/900?wellness">
 
 <div class="hero-content">
 <div class="tagline">Empower Her by <span>JAZZ</span></div>
 <h1>Transform Your Lifestyle</h1>
-<p>Women Wellness & Coaching Platform</p>
+<p>Luxury Wellness Coaching for Women</p>
 </div>
 </div>
 
+<!-- SERVICES -->
 <div class="section">
 <h2 class="title">Our Services</h2>
 <div class="services">
-<div class="card"><img src="https://picsum.photos/400/300?gym,women"><h3>Personal Training</h3></div>
-<div class="card"><img src="https://picsum.photos/400/300?weightloss"><h3>Weight Loss</h3></div>
-<div class="card"><img src="https://picsum.photos/400/300?diet"><h3>Diet Planning</h3></div>
-<div class="card"><img src="https://picsum.photos/400/300?online,coaching"><h3>Online Coaching</h3></div>
+<div class="card glass"><img src="https://picsum.photos/400/300?fitness"><h3>Personal Training</h3></div>
+<div class="card glass"><img src="https://picsum.photos/400/300?weight"><h3>Weight Loss</h3></div>
+<div class="card glass"><img src="https://picsum.photos/400/300?diet"><h3>Diet Planning</h3></div>
+<div class="card glass"><img src="https://picsum.photos/400/300?coaching"><h3>Online Coaching</h3></div>
 </div>
 </div>
 
+<!-- BOOKING -->
 <div class="section">
 <h2 class="title">Book Session</h2>
-<div class="booking">
+<div class="booking glass">
 <input id="name" placeholder="Name">
 <input id="email" placeholder="Email">
 <textarea id="goal" placeholder="Your Goal"></textarea>
 <button onclick="payNow()">Pay & Book ₹999</button>
+</div>
+</div>
+
+<!-- QR -->
+<div class="section">
+<h2 class="title">Or Pay via UPI</h2>
+<div class="qr">
+<p>Scan & Pay</p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=yourupi@bank&pn=Jazz&am=999">
+<p>₹999</p>
 </div>
 </div>
 
@@ -171,9 +170,19 @@ amount:99900,
 currency:"INR",
 name:"Empower Her by Jazz",
 handler:function(){
+
+// WhatsApp message
+let msg=`New Booking:%0AName: ${name}%0AEmail: ${email}%0AGoal: ${goal}`;
+window.open(`https://wa.me/919999999999?text=${msg}`,'_blank');
+
+// popup
 let popup=document.getElementById("popup");
 popup.style.display="block";
-setTimeout(()=>popup.style.display="none",2500);
+
+// redirect after 2 sec
+setTimeout(()=>{
+window.location.href="#";
+},2000);
 }
 };
 
