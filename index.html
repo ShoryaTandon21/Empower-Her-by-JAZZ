@@ -7,12 +7,7 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <style>
-:root{
-  --bg:#f9f7fc;
-  --primary:#8E7CFF;
-  --secondary:#FF9ECF;
-  --text:#222;
-}
+:root{--bg:#f9f7fc;--primary:#8E7CFF;--secondary:#FF9ECF;--text:#222}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{background:var(--bg);color:var(--text)}
 
@@ -34,19 +29,22 @@ body{background:var(--bg);color:var(--text)}
 .card h3{text-align:center;padding:10px}
 .card p{text-align:center;padding:0 10px 15px;color:#555;font-size:14px}
 
-.booking{max-width:400px;margin:auto;background:#fff;padding:25px;border-radius:15px}
-.booking input,.booking textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ddd}
-.booking button{width:100%;padding:12px;border:none;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;font-weight:bold}
+.booking,.enquiry{max-width:420px;margin:auto;background:#fff;padding:25px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.booking input,.booking textarea,.enquiry input,.enquiry textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ddd}
+.booking button,.enquiry button{width:100%;padding:12px;border:none;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;font-weight:bold;cursor:pointer}
 
-.btn{display:inline-block;padding:10px 20px;border-radius:25px;background:linear-gradient(90deg,#ff7eb3,#ff758c);color:#fff;text-decoration:none}
+.btn{display:inline-block;padding:10px 20px;border-radius:25px;background:linear-gradient(90deg,#ff7eb3,#ff758c);color:#fff;text-decoration:none;margin:5px}
 
 .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px;border-radius:50px;text-decoration:none}
+
+.popup{position:fixed;top:20px;right:20px;background:#fff;padding:12px 16px;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,.1);display:none}
 </style>
 </head>
 
 <body>
 
 <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">Chat</a>
+<div id="popup" class="popup">Message sent successfully ✅</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -97,6 +95,17 @@ I help women achieve mental peace, emotional balance, and confidence in life. My
 <p style="text-align:center;color:#777">(Will be added)</p>
 </div>
 
+<!-- ENQUIRY FORM (WHATSAPP) -->
+<div class="section">
+<h2 class="title">Enquiry</h2>
+<div class="enquiry">
+<input id="qname" placeholder="Your Name">
+<input id="qphone" placeholder="Phone Number">
+<textarea id="qmsg" placeholder="Your Query"></textarea>
+<button onclick="sendQuery()">Send Enquiry</button>
+</div>
+</div>
+
 <!-- BOOK -->
 <div class="section">
 <h2 class="title">Book Session</h2>
@@ -108,10 +117,11 @@ I help women achieve mental peace, emotional balance, and confidence in life. My
 </div>
 </div>
 
-<!-- INSTAGRAM -->
+<!-- CONNECT -->
 <div class="section" style="text-align:center">
 <h2 class="title">Connect With Us</h2>
-<a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="btn">Follow on Instagram</a>
+<a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="btn">Instagram</a>
+<a href="https://wa.me/919999999999" target="_blank" class="btn" style="background:#25D366">WhatsApp</a>
 </div>
 
 <script>
@@ -119,10 +129,27 @@ let slides=document.querySelectorAll('.hero img');
 let i=0;
 setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},3000);
 
+function showPopup(){
+const p=document.getElementById('popup');
+p.style.display='block';
+setTimeout(()=>p.style.display='none',2500);
+}
+
+function sendQuery(){
+const n=document.getElementById('qname').value;
+const ph=document.getElementById('qphone').value;
+const m=document.getElementById('qmsg').value;
+if(!n||!ph||!m){alert('Please fill all fields');return;}
+let text=`New Enquiry:%0AName:${n}%0APhone:${ph}%0AQuery:${m}`;
+window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
+showPopup();
+}
+
 function payNow(){
 const name=document.getElementById("name").value;
 const email=document.getElementById("email").value;
 const goal=document.getElementById("goal").value;
+if(!name||!email||!goal){alert("Fill all fields");return;}
 
 const options={
 key:"rzp_test_SiSYqtmRzqf664",
@@ -132,7 +159,7 @@ name:"Empower Her By Jazz",
 handler:function(){
 let msg=`New Booking:%0AName:${name}%0AEmail:${email}%0AGoal:${goal}`;
 window.open(`https://wa.me/919999999999?text=${msg}`,'_blank');
-alert("Booking Successful");
+showPopup();
 }
 };
 new Razorpay(options).open();
