@@ -11,47 +11,42 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{background:var(--bg);color:var(--text)}
 
-.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.section{padding:70px 10%}
+.title{text-align:center;font-size:2rem;margin-bottom:30px}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
 .hero img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:1s}
 .hero img.active{opacity:1}
 .overlay{position:absolute;width:100%;height:100%;background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(249,247,252,.95))}
 .hero-content{position:relative;z-index:2}
-.tagline{color:#fff;letter-spacing:4px;font-weight:700}
+.tagline{color:#fff;font-weight:700}
 .hero h1{color:#fff;font-size:3rem}
 .hero p{color:#eee}
 
-.section{padding:70px 10%}
-.title{text-align:center;font-size:2rem;margin-bottom:30px}
-
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.05)}
-.card img{width:100%;height:150px;object-fit:cover}
-.card h3{text-align:center;padding:10px}
-.card p{text-align:center;padding:0 10px 15px;color:#555;font-size:14px}
+.card{background:#fff;border-radius:15px;padding:15px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.05)}
 
-.booking,.enquiry{max-width:420px;margin:auto;background:#fff;padding:25px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
-.booking input,.booking textarea,.enquiry input,.enquiry textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ddd}
-.booking button,.enquiry button{width:100%;padding:12px;border:none;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;font-weight:bold;cursor:pointer}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.test-card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+
+.booking,.enquiry{max-width:420px;margin:auto;background:#fff;padding:25px;border-radius:15px}
+input,textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ddd}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;font-weight:bold}
 
 .btn{display:inline-block;padding:10px 20px;border-radius:25px;background:linear-gradient(90deg,#ff7eb3,#ff758c);color:#fff;text-decoration:none;margin:5px}
-
 .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px;border-radius:50px;text-decoration:none}
-
-.popup{position:fixed;top:20px;right:20px;background:#fff;padding:12px 16px;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,.1);display:none}
+.popup{position:fixed;top:20px;right:20px;background:#fff;padding:12px;border-radius:10px;display:none}
 </style>
 </head>
 
 <body>
-
 <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">Chat</a>
-<div id="popup" class="popup">Message sent successfully ✅</div>
+<div id="popup" class="popup">Submitted Successfully ✅</div>
 
-<!-- HERO -->
 <div class="hero">
 <div class="overlay"></div>
 <img src="https://picsum.photos/1600/900?woman" class="active">
 <img src="https://picsum.photos/1600/900?meditation">
-<img src="https://picsum.photos/1600/900?calm">
 <div class="hero-content">
 <div class="tagline">Heal • Rise • Shine</div>
 <h1>Empower Her By Jazz</h1>
@@ -59,50 +54,42 @@ body{background:var(--bg);color:var(--text)}
 </div>
 </div>
 
-<!-- ABOUT -->
 <div class="section">
 <h2 class="title">About Me</h2>
-<p style="text-align:center;max-width:700px;margin:auto;color:#555">
-I help women achieve mental peace, emotional balance, and confidence in life. My mission is to guide every woman towards a calm, strong, and empowered mindset.
-</p>
+<p style="text-align:center;color:#555">Helping women achieve peace and confidence.</p>
 </div>
 
-<!-- SERVICES -->
 <div class="section">
 <h2 class="title">Our Services</h2>
 <div class="services">
-<div class="card"><img src="https://picsum.photos/400/300?mind"><h3>Mind Wellness</h3><p>Improve clarity and emotional strength.</p></div>
-<div class="card"><img src="https://picsum.photos/400/300?stress"><h3>Stress Management</h3><p>Reduce stress and feel peaceful.</p></div>
-<div class="card"><img src="https://picsum.photos/400/300?selflove"><h3>Self Love</h3><p>Build confidence and self-worth.</p></div>
-<div class="card"><img src="https://picsum.photos/400/300?lifestyle"><h3>Lifestyle Balance</h3><p>Create harmony in daily life.</p></div>
+<div class="card">Mind Wellness</div>
+<div class="card">Stress Management</div>
+<div class="card">Self Love</div>
+<div class="card">Lifestyle Balance</div>
 </div>
 </div>
 
-<!-- WHY -->
 <div class="section">
 <h2 class="title">Why Choose Us</h2>
-<p style="text-align:center;color:#555">
-✔ Personalized guidance<br>
-✔ Women-focused safe space<br>
-✔ Mental wellness priority<br>
-✔ Real transformation
-</p>
+<p style="text-align:center">✔ Personalized ✔ Safe space ✔ Mental focus</p>
 </div>
 
-<!-- TESTIMONIAL -->
 <div class="section">
 <h2 class="title">Testimonials</h2>
-<p style="text-align:center;color:#777">(Will be added)</p>
+<div class="testimonials">
+<div class="test-card">Amazing experience! 🌸</div>
+<div class="test-card">Helped me mentally grow 💖</div>
+</div>
 </div>
 
-<!-- ENQUIRY FORM (WHATSAPP) -->
+<!-- ENQUIRY -->
 <div class="section">
 <h2 class="title">Enquiry</h2>
 <div class="enquiry">
-<input id="qname" placeholder="Your Name">
-<input id="qphone" placeholder="Phone Number">
-<textarea id="qmsg" placeholder="Your Query"></textarea>
-<button onclick="sendQuery()">Send Enquiry</button>
+<input id="qname" placeholder="Name">
+<input id="qphone" placeholder="Phone">
+<textarea id="qmsg" placeholder="Query"></textarea>
+<button onclick="sendQuery()">Send</button>
 </div>
 </div>
 
@@ -112,57 +99,48 @@ I help women achieve mental peace, emotional balance, and confidence in life. My
 <div class="booking">
 <input id="name" placeholder="Name">
 <input id="email" placeholder="Email">
-<textarea id="goal" placeholder="Your Goal"></textarea>
-<button onclick="payNow()">Pay & Book ₹999</button>
+<textarea id="goal" placeholder="Goal"></textarea>
+<button onclick="payNow()">Pay ₹999</button>
 </div>
 </div>
 
 <!-- CONNECT -->
 <div class="section" style="text-align:center">
-<h2 class="title">Connect With Us</h2>
+<h2 class="title">Connect</h2>
 <a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="btn">Instagram</a>
 <a href="https://wa.me/919999999999" target="_blank" class="btn" style="background:#25D366">WhatsApp</a>
 </div>
 
 <script>
-let slides=document.querySelectorAll('.hero img');
-let i=0;
-setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},3000);
+function showPopup(){let p=document.getElementById('popup');p.style.display='block';setTimeout(()=>p.style.display='none',2000)}
 
-function showPopup(){
-const p=document.getElementById('popup');
-p.style.display='block';
-setTimeout(()=>p.style.display='none',2500);
+function sendToSheet(data){
+  fetch("https://script.google.com/macros/s/AKfycbwerjC-uxvRIFp6ba7-dqHNX3RtQVaFTQ_O_Ion6v6C5gD_utuxVcX8AbYuWnTSYDTb/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
 }
 
 function sendQuery(){
-const n=document.getElementById('qname').value;
-const ph=document.getElementById('qphone').value;
-const m=document.getElementById('qmsg').value;
-if(!n||!ph||!m){alert('Please fill all fields');return;}
-let text=`New Enquiry:%0AName:${n}%0APhone:${ph}%0AQuery:${m}`;
+let n=qname.value,ph=qphone.value,m=qmsg.value;
+let text=`New Enquiry:%0A${n}%0A${ph}%0A${m}`;
 window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
+sendToSheet({type:"enquiry",name:n,phone:ph,message:m});
 showPopup();
 }
 
 function payNow(){
-const name=document.getElementById("name").value;
-const email=document.getElementById("email").value;
-const goal=document.getElementById("goal").value;
-if(!name||!email||!goal){alert("Fill all fields");return;}
-
-const options={
+let n=name.value,e=email.value,g=goal.value;
+new Razorpay({
 key:"rzp_test_SiSYqtmRzqf664",
 amount:99900,
-currency:"INR",
-name:"Empower Her By Jazz",
 handler:function(){
-let msg=`New Booking:%0AName:${name}%0AEmail:${email}%0AGoal:${goal}`;
-window.open(`https://wa.me/919999999999?text=${msg}`,'_blank');
+let text=`New Booking:%0A${n}%0A${e}%0A${g}`;
+window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
+sendToSheet({type:"booking",name:n,email:e,goal:g});
 showPopup();
 }
-};
-new Razorpay(options).open();
+}).open();
 }
 </script>
 
