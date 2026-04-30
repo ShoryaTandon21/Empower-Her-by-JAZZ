@@ -1,148 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Empower Her By Jazz</title>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <meta charset="UTF-8">
+  <title>Empower Her by Jazz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root{--bg:#f9f7fc;--primary:#8E7CFF;--secondary:#FF9ECF;--text:#222}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:var(--bg);color:var(--text)}
-
-.section{padding:70px 10%}
-.title{text-align:center;font-size:2rem;margin-bottom:30px}
-
-.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
-.hero img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:1s}
-.hero img.active{opacity:1}
-.overlay{position:absolute;width:100%;height:100%;background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(249,247,252,.95))}
-.hero-content{position:relative;z-index:2}
-.tagline{color:#fff;font-weight:700}
-.hero h1{color:#fff;font-size:3rem}
-.hero p{color:#eee}
-
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;border-radius:15px;padding:15px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.05)}
-
-.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.test-card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
-
-.booking,.enquiry{max-width:420px;margin:auto;background:#fff;padding:25px;border-radius:15px}
-input,textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ddd}
-button{width:100%;padding:12px;border:none;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;font-weight:bold}
-
-.btn{display:inline-block;padding:10px 20px;border-radius:25px;background:linear-gradient(90deg,#ff7eb3,#ff758c);color:#fff;text-decoration:none;margin:5px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px;border-radius:50px;text-decoration:none}
-.popup{position:fixed;top:20px;right:20px;background:#fff;padding:12px;border-radius:10px;display:none}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">Chat</a>
-<div id="popup" class="popup">Submitted Successfully ✅</div>
 
-<div class="hero">
-<div class="overlay"></div>
-<img src="https://picsum.photos/1600/900?woman" class="active">
-<img src="https://picsum.photos/1600/900?meditation">
-<div class="hero-content">
-<div class="tagline">Heal • Rise • Shine</div>
-<h1>Empower Her By Jazz</h1>
-<p>Helping Women Find Mental Peace & Inner Strength</p>
-</div>
-</div>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <img src="images/logo-main.png" alt="logo">
+  </div>
 
-<div class="section">
-<h2 class="title">About Me</h2>
-<p style="text-align:center;color:#555">Helping women achieve peace and confidence.</p>
-</div>
+  <!-- HERO -->
+  <section class="hero">
 
-<div class="section">
-<h2 class="title">Our Services</h2>
-<div class="services">
-<div class="card">Mind Wellness</div>
-<div class="card">Stress Management</div>
-<div class="card">Self Love</div>
-<div class="card">Lifestyle Balance</div>
-</div>
-</div>
+    <!-- SLIDER -->
+    <div class="slider">
+      <img src="images/bg1.jpg" class="slide active">
+      <img src="images/bg2.jpg" class="slide">
+      <img src="images/bg3.jpg" class="slide">
+    </div>
 
-<div class="section">
-<h2 class="title">Why Choose Us</h2>
-<p style="text-align:center">✔ Personalized ✔ Safe space ✔ Mental focus</p>
-</div>
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
 
-<div class="section">
-<h2 class="title">Testimonials</h2>
-<div class="testimonials">
-<div class="test-card">Amazing experience! 🌸</div>
-<div class="test-card">Helped me mentally grow 💖</div>
-</div>
-</div>
+    <!-- CONTENT -->
+    <div class="hero-content">
 
-<!-- ENQUIRY -->
-<div class="section">
-<h2 class="title">Enquiry</h2>
-<div class="enquiry">
-<input id="qname" placeholder="Name">
-<input id="qphone" placeholder="Phone">
-<textarea id="qmsg" placeholder="Query"></textarea>
-<button onclick="sendQuery()">Send</button>
-</div>
-</div>
+      <img src="images/logo-full.png" class="hero-logo">
 
-<!-- BOOK -->
-<div class="section">
-<h2 class="title">Book Session</h2>
-<div class="booking">
-<input id="name" placeholder="Name">
-<input id="email" placeholder="Email">
-<textarea id="goal" placeholder="Goal"></textarea>
-<button onclick="payNow()">Pay ₹999</button>
-</div>
-</div>
+      <h1>Empower Her by Jazz</h1>
+      <p class="tagline">Heal • Rise • Shine</p>
 
-<!-- CONNECT -->
-<div class="section" style="text-align:center">
-<h2 class="title">Connect</h2>
-<a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="btn">Instagram</a>
-<a href="https://wa.me/919999999999" target="_blank" class="btn" style="background:#25D366">WhatsApp</a>
-</div>
+      <div class="contact">
+        <p>1234567897</p>
+        <p>1234567898</p>
+      </div>
 
-<script>
-function showPopup(){let p=document.getElementById('popup');p.style.display='block';setTimeout(()=>p.style.display='none',2000)}
+      <button class="btn">Book Now</button>
 
-function sendToSheet(data){
-  fetch("https://script.google.com/macros/s/AKfycbwerjC-uxvRIFp6ba7-dqHNX3RtQVaFTQ_O_Ion6v6C5gD_utuxVcX8AbYuWnTSYDTb/exec", {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
-}
+    </div>
 
-function sendQuery(){
-let n=qname.value,ph=qphone.value,m=qmsg.value;
-let text=`New Enquiry:%0A${n}%0A${ph}%0A${m}`;
-window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
-sendToSheet({type:"enquiry",name:n,phone:ph,message:m});
-showPopup();
-}
+  </section>
 
-function payNow(){
-let n=name.value,e=email.value,g=goal.value;
-new Razorpay({
-key:"rzp_test_SiSYqtmRzqf664",
-amount:99900,
-handler:function(){
-let text=`New Booking:%0A${n}%0A${e}%0A${g}`;
-window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
-sendToSheet({type:"booking",name:n,email:e,goal:g});
-showPopup();
-}
-}).open();
-}
-</script>
+  <script src="script.js"></script>
 
 </body>
 </html>
