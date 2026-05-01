@@ -16,19 +16,26 @@ body{
 
 /* NAVBAR */
 .navbar{
-  position:absolute;
+  position:fixed;
   width:100%;
   padding:15px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index:10;
+  z-index:1000;
+  transition:0.3s;
+}
+
+.navbar.scrolled{
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
 }
 
 .navbar img{
   height:50px;
 }
 
+/* MENU */
 .menu-toggle{
   font-size:28px;
   cursor:pointer;
@@ -44,28 +51,16 @@ body{
   list-style:none;
 }
 
-.nav-links li{
-  margin:10px 0;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-}
-
 /* HERO */
 .hero{
-  position:relative;
   height:100vh;
-}
-
-.slider,.slide{
-  position:absolute;
-  width:100%;
-  height:100%;
+  position:relative;
 }
 
 .slide{
+  position:absolute;
+  width:100%;
+  height:100%;
   object-fit:cover;
   opacity:0;
   transition:1s;
@@ -73,6 +68,7 @@ body{
 
 .slide.active{
   opacity:1;
+  transform:scale(1.05);
 }
 
 .overlay{
@@ -99,19 +95,20 @@ body{
 
 .btn{
   margin-top:15px;
-  padding:10px 25px;
-  background:gold;
+  padding:12px 28px;
+  background:linear-gradient(45deg,gold,#d4af37);
   border:none;
   cursor:pointer;
+  border-radius:6px;
 }
 
 /* SECTIONS */
 .section{
-  padding:80px 20px;
+  padding:90px 20px;
   text-align:center;
 }
 
-/* GLASS CARDS */
+/* GLASS */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -119,17 +116,27 @@ body{
 }
 
 .card{
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(12px);
   background:rgba(255,255,255,0.05);
   padding:25px;
   border-radius:15px;
-  border:1px solid rgba(255,255,255,0.1);
-  transition:0.3s;
+  transition:0.4s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  border-color:gold;
+  transform:translateY(-8px);
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* WHATSAPP */
@@ -140,4 +147,5 @@ body{
   background:#25D366;
   padding:15px;
   border-radius:50%;
+  font-size:20px;
 }
