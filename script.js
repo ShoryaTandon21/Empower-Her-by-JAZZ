@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+  // MENU
   window.toggleMenu = function(){
-    let nav = document.getElementById("navLinks");
-    nav.style.display = nav.style.display === "block" ? "none" : "block";
+    document.getElementById("navLinks").classList.toggle("active");
   }
 
   window.scrollToSection = function(id){
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
     window.open("https://wa.me/919711771383");
   }
 
+  // SLIDER
   let slides = document.querySelectorAll(".slide");
   let index = 0;
 
@@ -24,5 +25,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
   showSlide();
   setInterval(showSlide, 3000);
+
+  // GSAP
+  gsap.from(".hero-content", {opacity:0, y:50, duration:1});
+  gsap.from(".card", {
+    scrollTrigger:".card",
+    opacity:0,
+    y:40,
+    stagger:0.2
+  });
 
 });
