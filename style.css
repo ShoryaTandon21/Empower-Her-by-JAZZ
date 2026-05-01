@@ -3,7 +3,6 @@ body{
   font-family:Poppins;
   background:#fdf8f6;
   color:#333;
-  overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -13,18 +12,12 @@ body{
   padding:15px 25px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
   background:white;
   z-index:9999;
 }
 
-.nav-logo{
-  height:40px;
-}
-
 .menu-toggle{
   font-size:28px;
-  color:#333;
   cursor:pointer;
 }
 
@@ -36,16 +29,9 @@ body{
   right:20px;
   background:white;
   padding:20px;
-  border-radius:10px;
 }
 
-.nav-links li{
-  list-style:none;
-  padding:10px;
-  cursor:pointer;
-}
-
-/* HERO FIXED */
+/* HERO */
 .hero{
   height:100vh;
   position:relative;
@@ -58,7 +44,6 @@ body{
   height:100%;
   object-fit:cover;
   opacity:0;
-  z-index:0;
 }
 
 .slide.active{
@@ -69,8 +54,7 @@ body{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(255,255,255,0.5);
-  z-index:1;
+  background:rgba(255,255,255,0.3);
 }
 
 .hero-content{
@@ -78,38 +62,26 @@ body{
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  z-index:2;
   text-align:center;
-  width:90%;
-  max-width:600px;
-}
-
-.hero-logo{
-  width:110px;
-  margin-bottom:10px;
 }
 
 /* SECTION */
 .section{
   padding:100px 20px;
   background:white;
-  position:relative;
-  z-index:5;
-  text-align:center;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 }
 
 .card{
   background:#fff;
   padding:20px;
   border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* FORM */
@@ -121,37 +93,6 @@ body{
   gap:10px;
 }
 
-.form input, .form textarea{
-  padding:10px;
-  border:1px solid #ccc;
-  border-radius:6px;
-}
-
-/* PAYMENT */
-.qr{
-  width:150px;
-  margin-top:15px;
-}
-
-/* BUTTON */
-.btn{
-  padding:12px 25px;
-  background:#c9a030;
-  color:white;
-  border:none;
-  border-radius:6px;
-}
-
-/* INSTAGRAM */
-.insta{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  text-decoration:none;
-  color:#333;
-}
-
 /* WHATSAPP */
 .whatsapp{
   position:fixed;
@@ -161,6 +102,4 @@ body{
   padding:15px;
   border-radius:50%;
   color:white;
-  z-index:9999;
-  cursor:pointer;
 }
