@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Empower Her by Jazz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
+<div class="navbar" id="navbar">
   <img src="images/logo-main.png">
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -39,12 +40,13 @@
 
   <div class="hero-content">
     <img src="images/logo-full.png" class="hero-logo">
+
     <h1>Empower Her by Jazz</h1>
     <p class="tagline">Heal • Rise • Shine</p>
 
     <div class="contact">
-      <p>1234567897</p>
-      <p>1234567896</p>
+      <p>97117-71383</p>
+      <p>70044-53676</p>
     </div>
 
     <button class="btn" onclick="scrollToForm()">Register Now</button>
@@ -53,16 +55,16 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section reveal">
   <h2>My Journey</h2>
   <p>
-    I help women transform their mindset, heal emotionally,
-    and step into their most confident and powerful version.
+    I help women heal emotionally, build confidence, and transform their mindset
+    to step into their most powerful version.
   </p>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section reveal">
   <h2>My Services</h2>
 
   <div class="services">
@@ -75,14 +77,14 @@
 </section>
 
 <!-- TESTIMONIAL -->
-<section id="testimonials" class="section">
+<section id="testimonials" class="section reveal">
   <h2>Testimonials</h2>
   <div class="card">"This changed my life!"</div>
   <div class="card">"Highly recommended"</div>
 </section>
 
 <!-- FORM -->
-<section class="section">
+<section class="section reveal">
   <h2>Register Now</h2>
 
   <form id="form">
@@ -99,7 +101,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section reveal">
   <h2>Contact</h2>
   <p>📞 97117-71383</p>
   <p>📞 70044-53676</p>
@@ -107,7 +109,7 @@
 </section>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/919711771383" class="whatsapp">💬</a>
+<a href="#" onclick="openWhatsApp()" class="whatsapp">💬</a>
 
 <script src="script.js"></script>
 
