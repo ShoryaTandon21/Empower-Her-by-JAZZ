@@ -49,7 +49,7 @@
       <p>70044-53676</p>
     </div>
 
-    <button class="btn" onclick="scrollToForm()">Register Now</button>
+    <button class="btn" onclick="scrollToForm()">Book Your Session</button>
   </div>
 
 </section>
@@ -58,7 +58,7 @@
 <section id="about" class="section reveal">
   <h2>My Journey</h2>
   <p class="desc">
-    I guide women to heal deeply, rise confidently, and create a life aligned with their true power.
+    Helping women heal, grow and become their most confident self.
   </p>
 </section>
 
@@ -78,32 +78,46 @@
 <!-- TESTIMONIAL -->
 <section id="testimonials" class="section reveal">
   <h2>Client Transformations</h2>
-  <div class="card">"Completely transformed my mindset!"</div>
-  <div class="card">"I feel powerful and confident now."</div>
+
+  <div class="services">
+    <div class="card">"I feel confident and happy again!"</div>
+    <div class="card">"This journey changed my life."</div>
+  </div>
 </section>
 
-<!-- FORM -->
+<!-- QUERY FORM -->
 <section class="section reveal">
-  <h2>Book Your Session</h2>
+  <h2>Drop Your Query</h2>
 
-  <form id="form">
+  <form id="form" class="form-box">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+    <textarea name="message" placeholder="Your Query" required></textarea>
 
     <button class="btn">Submit</button>
   </form>
+</section>
 
-  <button class="btn outline" onclick="payNow()">Pay & Book</button>
+<!-- PAYMENT -->
+<section class="section reveal">
+  <h2>Secure Your Spot</h2>
 
+  <div class="payment-box">
+    <p><strong>UPI:</strong> yourupi@bank</p>
+    <img src="images/qr.png" class="qr">
+    <button class="btn" onclick="payNow()">Pay Now</button>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section reveal">
   <h2>Contact</h2>
-  <p>📞 97117-71383 (Call & WhatsApp)</p>
-  <p>📞 70044-53676 (Call Only)</p>
-  <p>📷 <a href="https://www.instagram.com/empowerherbyjazz?igsh=YXNoMzhrZHA4aTlt" target="_blank">Instagram</a></p>
+
+  <div class="contact-box">
+    <p>📞 97117-71383 (Call & WhatsApp)</p>
+    <p>📞 70044-53676 (Call Only)</p>
+    <p>📷 <a href="https://www.instagram.com/empowerherbyjazz" target="_blank">@empowerherbyjazz</a></p>
+  </div>
 </section>
 
 <a href="#" onclick="openWhatsApp()" class="whatsapp">💬</a>
