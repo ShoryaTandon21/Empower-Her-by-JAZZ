@@ -1,22 +1,17 @@
 function toggleMenu(){
   let nav = document.getElementById("navLinks");
-
-  if(nav.style.display === "block"){
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "block";
-  }
+  nav.style.display = nav.style.display === "block" ? "none" : "block";
 }
 
 function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({
-    behavior:"smooth"
-  });
-
-  // close menu after click
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
   document.getElementById("navLinks").style.display="none";
 }
 
 function openWhatsApp(){
   window.open("https://wa.me/919711771383");
+}
+
+function payNow(){
+  window.open("https://rzp.io/l/YOUR_LINK");
 }
