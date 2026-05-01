@@ -1,26 +1,29 @@
-function toggleMenu(){
-  let nav = document.getElementById("navLinks");
-  nav.style.display = nav.style.display === "block" ? "none" : "block";
-}
+document.addEventListener("DOMContentLoaded", function(){
 
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:"smooth"});
-}
+  window.toggleMenu = function(){
+    let nav = document.getElementById("navLinks");
+    nav.style.display = nav.style.display === "block" ? "none" : "block";
+  }
 
-/* 🔥 SLIDER FIX */
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+  window.scrollToSection = function(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+  }
 
-function showSlide(){
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
+  window.openWhatsApp = function(){
+    window.open("https://wa.me/919711771383");
+  }
 
-  index = (index + 1) % slides.length;
-}
+  // 🔥 SLIDER
+  let slides = document.querySelectorAll(".slide");
+  let index = 0;
 
-setInterval(showSlide, 3000);
+  function showSlide(){
+    slides.forEach(s => s.style.display = "none");
+    slides[index].style.display = "block";
+    index = (index + 1) % slides.length;
+  }
 
-/* WhatsApp */
-function openWhatsApp(){
-  window.open("https://wa.me/919711771383");
-}
+  showSlide();
+  setInterval(showSlide, 3000);
+
+});
