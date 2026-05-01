@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function(){
     window.open("https://wa.me/919711771383");
   }
 
-  // 🔥 SLIDER
   let slides = document.querySelectorAll(".slide");
   let index = 0;
 
