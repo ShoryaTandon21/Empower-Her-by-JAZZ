@@ -7,7 +7,11 @@
 <title>Empower Her by Jazz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
@@ -19,10 +23,11 @@
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <ul id="navLinks" class="nav-links">
-    <li><a href="#">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#query">Query</a></li>
+    <li><a href="#booking">Book</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </div>
@@ -30,36 +35,32 @@
 <!-- HERO -->
 <section class="hero">
 
-  <div class="slider">
-    <img src="images/bg1.png" class="slide active">
-    <img src="images/bg2.png" class="slide">
-    <img src="images/bg3.png" class="slide">
-  </div>
+<div class="slider">
+  <img src="images/bg1.png" class="slide active">
+  <img src="images/bg2.png" class="slide">
+  <img src="images/bg3.png" class="slide">
+</div>
 
-  <div class="overlay"></div>
+<div class="overlay"></div>
 
-  <div class="hero-content">
-    <img src="images/logo-full.png" class="hero-logo">
+<div class="hero-content">
+  <img src="images/logo-full.png" class="hero-logo">
 
-    <h1>Empower Her by Jazz</h1>
-    <p class="tagline">Heal • Rise • Shine</p>
+  <h1>Empower Her by Jazz</h1>
+  <p class="tagline">Heal • Rise • Shine</p>
 
-    <div class="contact">
-      <p>97117-71383</p>
-      <p>70044-53676</p>
-    </div>
+  <p>97117-71383</p>
+  <p>70044-53676</p>
 
-    <button class="btn" onclick="scrollToForm()">Book Your Session</button>
-  </div>
+  <button class="btn" onclick="scrollToSection('booking')">Book Session</button>
+</div>
 
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section reveal">
   <h2>My Journey</h2>
-  <p class="desc">
-    Helping women heal, grow and become their most confident self.
-  </p>
+  <p>Helping women transform emotionally, mentally & spiritually.</p>
 </section>
 
 <!-- SERVICES -->
@@ -80,16 +81,16 @@
   <h2>Client Transformations</h2>
 
   <div class="services">
-    <div class="card">"I feel confident and happy again!"</div>
-    <div class="card">"This journey changed my life."</div>
+    <div class="card">"Life changing experience"</div>
+    <div class="card">"Confidence boosted!"</div>
   </div>
 </section>
 
 <!-- QUERY FORM -->
-<section class="section reveal">
+<section id="query" class="section reveal">
   <h2>Drop Your Query</h2>
 
-  <form id="form" class="form-box">
+  <form id="queryForm" class="form-box">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Query" required></textarea>
@@ -98,13 +99,23 @@
   </form>
 </section>
 
-<!-- PAYMENT -->
-<section class="section reveal">
-  <h2>Secure Your Spot</h2>
+<!-- BOOKING FORM -->
+<section id="booking" class="section reveal">
+  <h2>Book Your Session</h2>
 
+  <form id="bookingForm" class="form-box">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" placeholder="What do you need help with?" required></textarea>
+
+    <button class="btn">Submit Booking</button>
+  </form>
+
+  <!-- PAYMENT -->
   <div class="payment-box">
     <p><strong>UPI:</strong> yourupi@bank</p>
     <img src="images/qr.png" class="qr">
+
     <button class="btn" onclick="payNow()">Pay Now</button>
   </div>
 </section>
@@ -113,14 +124,20 @@
 <section id="contact" class="section reveal">
   <h2>Contact</h2>
 
-  <div class="contact-box">
-    <p>📞 97117-71383 (Call & WhatsApp)</p>
-    <p>📞 70044-53676 (Call Only)</p>
-    <p>📷 <a href="https://www.instagram.com/empowerherbyjazz" target="_blank">@empowerherbyjazz</a></p>
-  </div>
+  <p><i class="fa fa-phone"></i> 97117-71383</p>
+  <p><i class="fa fa-phone"></i> 70044-53676</p>
+
+  <p>
+    <a href="https://www.instagram.com/empowerherbyjazz" target="_blank">
+      <i class="fab fa-instagram"></i> @empowerherbyjazz
+    </a>
+  </p>
 </section>
 
-<a href="#" onclick="openWhatsApp()" class="whatsapp">💬</a>
+<!-- WHATSAPP -->
+<a href="#" onclick="openWhatsApp()" class="whatsapp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="script.js"></script>
 
