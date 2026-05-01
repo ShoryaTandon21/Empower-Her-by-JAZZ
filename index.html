@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Empower Her by Jazz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empower Her by Jazz</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <img src="images/logo-main.png">
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul id="navLinks" class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </div>
 
+<!-- HERO -->
 <section class="hero">
+
   <div class="slider">
     <img src="images/bg1.png" class="slide active">
     <img src="images/bg2.png" class="slide">
@@ -34,17 +47,24 @@
       <p>1234567896</p>
     </div>
 
-    <button class="btn">Book Now</button>
+    <button class="btn" onclick="scrollToForm()">Register Now</button>
   </div>
+
 </section>
 
-<section class="section">
-  <h2>About Me</h2>
-  <p>I help women gain clarity, confidence, and emotional strength.</p>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>My Journey</h2>
+  <p>
+    I help women transform their mindset, heal emotionally,
+    and step into their most confident and powerful version.
+  </p>
 </section>
 
-<section class="section">
+<!-- SERVICES -->
+<section id="services" class="section">
   <h2>My Services</h2>
+
   <div class="services">
     <div class="card">1:1 Personal Coach</div>
     <div class="card">Empower Her</div>
@@ -54,35 +74,40 @@
   </div>
 </section>
 
-<section class="section">
-  <h2>Why Choose Us</h2>
-  <p>Real transformation and personalized support.</p>
-</section>
-
-<section class="section">
+<!-- TESTIMONIAL -->
+<section id="testimonials" class="section">
   <h2>Testimonials</h2>
-  <p>"Amazing experience!"</p>
+  <div class="card">"This changed my life!"</div>
+  <div class="card">"Highly recommended"</div>
 </section>
 
+<!-- FORM -->
 <section class="section">
-  <h2>Enquiry Form</h2>
+  <h2>Register Now</h2>
+
   <form id="form">
     <input type="text" name="name" placeholder="Your Name" required><br><br>
     <input type="email" name="email" placeholder="Your Email" required><br><br>
     <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+
     <button class="btn">Submit</button>
   </form>
+
+  <br>
+  <button class="btn" onclick="payNow()">Pay & Book</button>
+
 </section>
 
-<section class="section">
+<!-- CONTACT -->
+<section id="contact" class="section">
   <h2>Contact</h2>
   <p>📞 97117-71383</p>
   <p>📞 70044-53676</p>
-  <p>📧 example@gmail.com</p>
   <p>📷 <a href="https://www.instagram.com/empowerherbyjazz?igsh=YXNoMzhrZHA4aTlt" target="_blank">Instagram</a></p>
 </section>
 
-<a href="https://wa.me/919711771383" class="whatsapp" target="_blank">💬</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me/919711771383" class="whatsapp">💬</a>
 
 <script src="script.js"></script>
 
