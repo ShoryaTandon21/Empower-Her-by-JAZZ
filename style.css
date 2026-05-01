@@ -5,37 +5,27 @@
   font-family:'Poppins',sans-serif;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
-  background:#0b0b0b;
-  color:white;
+  background:linear-gradient(135deg,#0f0f0f,#1e1e1e);
+  color:#eee;
 }
 
 /* NAVBAR */
 .navbar{
   position:fixed;
   width:100%;
-  padding:15px 40px;
+  padding:18px 50px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
-  transition:0.3s;
 }
 
 .navbar.scrolled{
   background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(12px);
 }
 
-.navbar img{
-  height:50px;
-}
-
-/* MENU */
 .menu-toggle{
   font-size:28px;
   cursor:pointer;
@@ -45,10 +35,12 @@ body{
   display:none;
   position:absolute;
   top:70px;
-  right:20px;
-  background:#111;
-  padding:20px;
-  list-style:none;
+  right:30px;
+  background:rgba(0,0,0,0.9);
+  padding:25px;
+  border-radius:12px;
+  flex-direction:column;
+  gap:18px;
 }
 
 /* HERO */
@@ -63,19 +55,19 @@ body{
   height:100%;
   object-fit:cover;
   opacity:0;
-  transition:1s;
+  transition:1.2s;
 }
 
 .slide.active{
   opacity:1;
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
 .overlay{
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5));
   position:absolute;
   width:100%;
   height:100%;
-  background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
 }
 
 .hero-content{
@@ -85,52 +77,78 @@ body{
   text-align:center;
 }
 
-.hero-logo{
-  width:150px;
+.hero-content h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
 }
 
 .tagline{
   color:gold;
+  letter-spacing:2px;
 }
 
+/* BUTTON */
 .btn{
-  margin-top:15px;
-  padding:12px 28px;
-  background:linear-gradient(45deg,gold,#d4af37);
+  margin-top:20px;
+  padding:14px 34px;
   border:none;
+  border-radius:8px;
+  background:linear-gradient(45deg,gold,#c9a030);
   cursor:pointer;
-  border-radius:6px;
+  transition:0.3s;
 }
 
-/* SECTIONS */
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.btn.outline{
+  background:transparent;
+  border:1px solid gold;
+}
+
+/* SECTION */
 .section{
-  padding:90px 20px;
+  padding:110px 40px;
+  max-width:1100px;
+  margin:auto;
   text-align:center;
 }
 
-/* GLASS */
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.desc{
+  max-width:600px;
+  margin:auto;
+}
+
+/* CARDS */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  gap:25px;
 }
 
 .card{
-  backdrop-filter:blur(12px);
+  padding:30px;
+  border-radius:20px;
   background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:15px;
+  backdrop-filter:blur(10px);
   transition:0.4s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
 }
 
-/* SCROLL ANIMATION */
+/* SCROLL */
 .reveal{
   opacity:0;
-  transform:translateY(40px);
+  transform:translateY(50px);
   transition:0.8s;
 }
 
@@ -142,10 +160,9 @@ body{
 /* WHATSAPP */
 .whatsapp{
   position:fixed;
-  bottom:20px;
-  right:20px;
+  bottom:25px;
+  right:25px;
   background:#25D366;
-  padding:15px;
+  padding:16px;
   border-radius:50%;
-  font-size:20px;
 }
