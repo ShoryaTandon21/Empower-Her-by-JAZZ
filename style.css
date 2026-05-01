@@ -114,4 +114,23 @@ body {
   .hero-logo {
     width: 180px;
   }
+  .section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
+  border-top: 1px solid #333;
+}
+
+.section h2 {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.section p, .section li {
+  color: #ccc;
+}
+
+ul {
+  list-style: none;
+}
 }
