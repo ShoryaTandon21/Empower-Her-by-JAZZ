@@ -1,20 +1,22 @@
-document.addEventListener("DOMContentLoaded", function(){
+function toggleMenu(){
+  let nav = document.getElementById("navLinks");
 
-  window.toggleMenu = function(){
-    let nav = document.getElementById("navLinks");
-    nav.style.display = nav.style.display==="block" ? "none" : "block";
+  if(nav.style.display === "block"){
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "block";
   }
+}
 
-  window.scrollToSection = function(id){
-    document.getElementById(id).scrollIntoView({behavior:"smooth"});
-  }
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
 
-  window.openWhatsApp = function(){
-    window.open("https://wa.me/919711771383");
-  }
+  // close menu after click
+  document.getElementById("navLinks").style.display="none";
+}
 
-  window.payNow = function(){
-    window.open("https://rzp.io/l/YOUR_LINK");
-  }
-
-});
+function openWhatsApp(){
+  window.open("https://wa.me/919711771383");
+}
