@@ -16,6 +16,7 @@
 <div class="navbar">
   <img src="images/logo-main.png" class="nav-logo">
 
+  <!-- FIX: visible color -->
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <ul id="navLinks" class="nav-links">
@@ -53,13 +54,39 @@
 
 </section>
 
-<!-- SECTIONS -->
-<section id="about" class="section"><h2>About</h2></section>
-<section id="services" class="section"><h2>Services</h2></section>
-<section id="testimonials" class="section"><h2>Testimonials</h2></section>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>I help women heal, grow and become their most confident version.</p>
+</section>
 
+<!-- SERVICES (YOUR EXACT ONES) -->
+<section id="services" class="section">
+  <h2>Services</h2>
+
+  <div class="grid">
+    <div class="card">1:1 Personal Coach</div>
+    <div class="card">Empower Her</div>
+    <div class="card">Relationship Mastery</div>
+    <div class="card">Inner Awakening</div>
+    <div class="card">Magnetic Women Code</div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section id="testimonials" class="section">
+  <h2>Client Transformations</h2>
+
+  <div class="grid">
+    <div class="card">"Life changing experience"</div>
+    <div class="card">"Confidence boosted!"</div>
+  </div>
+</section>
+
+<!-- QUERY -->
 <section id="query" class="section">
-  <h2>Drop Query</h2>
+  <h2>Drop Your Query</h2>
+
   <form class="form">
     <input type="text" placeholder="Name">
     <input type="email" placeholder="Email">
@@ -68,8 +95,10 @@
   </form>
 </section>
 
+<!-- BOOKING -->
 <section id="booking" class="section">
-  <h2>Book Session</h2>
+  <h2>Book Your Session</h2>
+
   <form class="form">
     <input type="text" placeholder="Name">
     <input type="tel" placeholder="Phone">
@@ -80,10 +109,24 @@
   <img src="images/qr.png" class="qr">
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
-  <p>97117-71383</p>
-  <p>70044-53676</p>
+
+  <p>📞 97117-71383</p>
+  <p>📞 70044-53676</p>
+
+  <!-- FIXED INSTAGRAM ICON -->
+  <a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="insta">
+    
+    <!-- SVG ICON (no CDN needed) -->
+    <svg width="20" height="20" viewBox="0 0 24 24">
+      <path fill="#E1306C" d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+    </svg>
+
+    @empowerherbyjazz
+  </a>
+
 </section>
 
 <a onclick="openWhatsApp()" class="whatsapp">💬</a>
