@@ -13,7 +13,7 @@
 <body>
 
 <header class="navbar">
-  <img src="images/logo-main.png" class="nav-logo">
+  <img src="images/logo-main.png" class="nav-logo" alt="Empower Her Logo">
 
   <button id="menuBtn" class="menu-toggle">☰</button>
 
@@ -31,7 +31,7 @@
 
 <section id="home" class="hero">
   <div class="hero-card">
-    <img src="images/logo-full.png" class="hero-logo">
+    <img src="images/logo-full.png" class="hero-logo" alt="Empower Her by Jazz Logo">
     <h1>Empower Her by Jazz</h1>
     <p class="tagline">Heal • Rise • Shine</p>
     <a href="#services" class="btn">Explore Services</a>
@@ -71,7 +71,38 @@
   </div>
 </section>
 
-<section class="section testimonials">
+ <section id="trust" class="section trust">
+  <span class="label">You Are Safe Here</span>
+  <h2>A Space Built on Trust</h2>
+
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon">🔒</div>
+      <h3>Secure Booking</h3>
+      <p>Your booking is confirmed only after successful payment.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="trust-icon">💖</div>
+      <h3>Women-Focused Guidance</h3>
+      <p>Designed specially for women who want emotional clarity and inner strength.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="trust-icon">🌿</div>
+      <h3>Safe Healing Space</h3>
+      <p>A calm, supportive and non-judgmental space for personal transformation.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="trust-icon">✨</div>
+      <h3>Transformation Tools</h3>
+      <p>Practical mindset and emotional healing tools for real-life growth.</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="section testimonials">
   <span class="label">Client Love 💖</span>
   <h2>Real Transformations</h2>
 
@@ -82,7 +113,7 @@
         "I finally feel emotionally light and clear. This session changed the way I see myself."
       </p>
       <div class="user">
-        <div class="avatar">A</div>
+        <div class="avatar"></div>
         <div>
           <h4>Anjali</h4>
           <span>Delhi</span>
@@ -95,7 +126,7 @@
         "I was stuck for years. After this, I feel confident and more in control of my life."
       </p>
       <div class="user">
-        <div class="avatar">P</div>
+        <div class="avatar"></div>
         <div>
           <h4>Pooja</h4>
           <span>Noida</span>
@@ -108,7 +139,7 @@
         "Deep, powerful and emotional. I never expected this level of transformation."
       </p>
       <div class="user">
-        <div class="avatar">R</div>
+        <div class="avatar"></div>
         <div>
           <h4>Riya</h4>
           <span>Gurgaon</span>
@@ -151,7 +182,8 @@
   <h2>Book Your Spot</h2>
 
   <p class="price">Empower Her™ Session — ₹999</p>
-<p class="payment-note">🔒 Your booking is confirmed only after successful payment</p>
+  <p class="payment-note">🔒 Your booking is confirmed only after successful payment</p>
+
   <form id="bookingForm" class="form">
     <input type="hidden" name="formType" value="Booking Form">
     <input type="text" name="name" placeholder="Your Name" required>
@@ -160,23 +192,17 @@
     <textarea name="message" placeholder="Which service do you want to book?"></textarea>
     <button class="btn" type="submit">Submit Booking</button>
   </form>
-
-
 </section>
 
-<a href="https://wa.me/919711771383?text=Hi%2C%20I%20want%20to%20book%20a%20coaching%20session." class="whatsapp" target="_blank">💬</a>
+<footer class="site-footer">
+  <div class="site-footer-container">
 
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script src="script.js"></script>
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3>Empower Her™</h3>
+    <div class="site-footer-brand">
+      <h3>Empower Her™ By Jazz</h3>
       <p>Helping women heal, rise & step into their most powerful self.</p>
     </div>
 
-    <div class="footer-links">
+    <div class="site-footer-links">
       <h4>Quick Links</h4>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
@@ -184,19 +210,24 @@
       <a href="#contact">Contact</a>
     </div>
 
-    <div class="footer-contact">
+    <div class="site-footer-contact">
       <h4>Contact</h4>
-      <p>📞 9711771383</p>
-      <p>📞 9711771383</p>
-      <p>📧 your@email.com</p>
+      <p>📞 97117-71383</p>
+      <p>📞 70044-53676</p>
+      <p>📧 example@gmail.com</p>
     </div>
 
   </div>
 
-  <div class="footer-bottom">
-    <p><p>© 2026 Empower Her™ By Jazz. Crafted with care for transformation ✨ All Rights Reserved.</p></p>
+  <div class="site-footer-bottom">
+    <p>© 2026 Empower Her™ By Jazz. Crafted with care for transformation ✨ All Rights Reserved.</p>
   </div>
 </footer>
+
+<a href="https://wa.me/919711771383?text=Hi%2C%20I%20want%20to%20book%20a%20coaching%20session." class="whatsapp" target="_blank">💬</a>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

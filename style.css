@@ -181,6 +181,12 @@ body{
   margin:10px 0 28px;
 }
 
+.section-text{
+  max-width:760px;
+  margin:0 auto;
+  line-height:1.8;
+}
+
 .grid{
   max-width:1120px;
   margin:auto;
@@ -224,6 +230,52 @@ body{
   line-height:1.8;
 }
 
+/* TRUST BADGES */
+.trust{
+  background:#fff8fb;
+}
+
+.trust-grid{
+  max-width:1120px;
+  margin:32px auto 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.trust-card{
+  background:rgba(255,255,255,0.86);
+  border:1px solid rgba(216,27,96,0.12);
+  border-radius:22px;
+  padding:24px 18px;
+  box-shadow:0 14px 34px rgba(216,27,96,0.08);
+  transition:0.3s ease;
+}
+
+.trust-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(216,27,96,0.14);
+}
+
+.trust-icon{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.trust-card h3{
+  margin:8px 0;
+  font-size:17px;
+  color:#321d27;
+}
+
+.trust-card p{
+  margin:0;
+  font-size:14px;
+  line-height:1.6;
+  color:#5d4652;
+}
+
+/* FORMS */
 .form{
   max-width:480px;
   margin:0 auto;
@@ -243,6 +295,20 @@ body{
   background:white;
 }
 
+.payment-note{
+  max-width:480px;
+  margin:12px auto 18px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(216,27,96,0.08);
+  color:#8a1648;
+  font-size:14px;
+  font-weight:600;
+  text-align:center;
+  border:1px solid rgba(216,27,96,0.18);
+}
+
+/* BUTTONS */
 .btn{
   display:inline-block;
   background:linear-gradient(135deg,#d81b60,#b3134f);
@@ -261,6 +327,71 @@ body{
   transform:translateY(-3px);
 }
 
+/* TESTIMONIALS */
+.testimonials{
+  text-align:center;
+  background:#fff;
+}
+
+.testimonial-container{
+  max-width:1120px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin:30px auto 0;
+}
+
+.testimonial-card{
+  background:#fff;
+  padding:22px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  text-align:left;
+  transition:all 0.3s ease;
+  border:1px solid rgba(216,27,96,0.10);
+}
+
+.testimonial-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(216,27,96,0.10);
+}
+
+.review{
+  font-size:14px;
+  color:#444;
+  margin-bottom:18px;
+  line-height:1.6;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#d81b60,#b3134f);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+.user h4{
+  margin:0;
+  font-size:15px;
+}
+
+.user span{
+  font-size:12px;
+  color:#888;
+}
+
+/* CONTACT */
 .insta{
   display:inline-flex;
   align-items:center;
@@ -271,6 +402,7 @@ body{
   font-weight:700;
 }
 
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:22px;
@@ -289,7 +421,87 @@ body{
   box-shadow:0 12px 28px rgba(0,0,0,0.22);
 }
 
+/* FOOTER */
+.site-footer{
+  width:100%;
+  background:#111;
+  color:#fff;
+  padding:50px 20px 20px;
+  margin-top:0;
+  overflow:hidden;
+}
+
+.site-footer-container{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.site-footer h3,
+.site-footer h4{
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.site-footer p{
+  color:#ccc;
+  font-size:14px;
+  line-height:1.6;
+  margin:6px 0;
+}
+
+.site-footer-links a{
+  display:block;
+  color:#ccc;
+  text-decoration:none;
+  font-size:14px;
+  margin-bottom:8px;
+  transition:all 0.3s ease;
+}
+
+.site-footer-links a:hover{
+  color:#fff;
+  transform:translateX(5px);
+}
+
+.site-footer-bottom{
+  max-width:1100px;
+  margin:30px auto 0;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,0.12);
+  text-align:center;
+}
+
+.site-footer-bottom p{
+  color:#aaa;
+  font-size:13px;
+  margin:0;
+}
+
+/* MOBILE */
 @media(max-width:768px){
+  .navbar{
+    height:70px;
+    padding:12px 18px;
+  }
+
+  .nav-logo,
+  .logo{
+    height:42px;
+    max-width:140px;
+  }
+
+  .hero{
+    padding:105px 16px 60px;
+  }
+
+  .hero-card{
+    padding:36px 20px;
+    border-radius:26px;
+  }
+
   .hero h1,
   .service-hero h1{
     font-size:36px;
@@ -299,129 +511,40 @@ body{
     width:120px;
   }
 
+  .tagline{
+    font-size:17px;
+  }
+
   .section{
     padding:75px 18px;
   }
-  .payment-note {
-  margin: 12px 0 14px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: rgba(216, 27, 96, 0.08);
-  color: #8a1648;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  border: 1px solid rgba(216, 27, 96, 0.18);
-}
-.testimonials {
-  text-align: center;
-  background: #fff;
-}
 
-.testimonial-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
+  .section h2{
+    font-size:32px;
+  }
 
-.testimonial-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  text-align: left;
-  transition: all 0.3s ease;
-}
+  .trust-card,
+  .testimonial-card{
+    text-align:center;
+  }
 
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-}
+  .user{
+    justify-content:center;
+  }
 
-.review {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
+  .site-footer{
+    padding:40px 18px 20px;
+    text-align:center;
+  }
 
-.user {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+  .site-footer-links a:hover{
+    transform:none;
+  }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #d81b60;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-}
-
-.user h4 {
-  margin: 0;
-  font-size: 15px;
-}
-
-.user span {
-  font-size: 12px;
-  color: #888;
-}
-.footer {
-  background: #111;
-  color: #fff;
-  padding: 50px 20px 20px;
-  margin-top: 50px;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.footer h3,
-.footer h4 {
-  margin-bottom: 12px;
-}
-
-.footer p {
-  font-size: 14px;
-  color: #ccc;
-}
-
-.footer-links a {
-  display: block;
-  text-decoration: none;
-  color: #ccc;
-  font-size: 14px;
-  margin-bottom: 8px;
-  transition: 0.3s;
-}
-
-.footer-links a:hover {
-  color: #fff;
-  transform: translateX(5px);
-}
-
-.footer-contact p {
-  margin: 6px 0;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 15px;
-  font-size: 13px;
-  color: #aaa;
-}
+  .whatsapp{
+    right:18px;
+    bottom:18px;
+    width:54px;
+    height:54px;
+  }
 }
