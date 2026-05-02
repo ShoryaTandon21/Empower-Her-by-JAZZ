@@ -13,11 +13,13 @@ body{
   background:#fff8fb;
 }
 
+/* NAVBAR */
 .navbar{
   position:fixed;
   top:0;
   left:0;
   width:100%;
+  height:76px;
   padding:14px 28px;
   background:rgba(255,255,255,0.96);
   display:flex;
@@ -27,11 +29,15 @@ body{
   box-shadow:0 8px 25px rgba(216,27,96,0.08);
 }
 
-.nav-logo{
+.nav-logo,
+.logo{
   height:46px;
+  max-width:160px;
   object-fit:contain;
+  display:block;
 }
 
+/* MENU */
 .menu-toggle{
   font-size:32px;
   color:#c2185b;
@@ -74,6 +80,7 @@ body{
   color:white;
 }
 
+/* HOMEPAGE HERO */
 .hero{
   min-height:100vh;
   padding:120px 20px 70px;
@@ -98,7 +105,10 @@ body{
 
 .hero-logo{
   width:145px;
-  margin-bottom:18px;
+  max-width:160px;
+  display:block;
+  margin:0 auto 18px;
+  position:static;
 }
 
 .hero h1{
@@ -115,20 +125,49 @@ body{
   margin-bottom:24px;
 }
 
+/* SERVICE PAGE FIX */
+.service-page{
+  padding-top:110px;
+  background:#fff8fb;
+  min-height:100vh;
+}
+
+.service-hero{
+  min-height:auto;
+  padding:120px 20px 80px;
+  background:linear-gradient(135deg,#ffe4ef,#fff8fb);
+}
+
+.service-hero .hero-inner{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.service-hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:46px;
+  color:#321d27;
+}
+
+/* SECTIONS */
 .section{
   padding:90px 24px;
   text-align:center;
 }
 
-.soft{
+.soft,
+.alt{
   background:#fff0f6;
 }
 
-.booking{
+.booking,
+.booking-section{
   background:linear-gradient(135deg,#ffe4ef,#fff8fb);
 }
 
-.label{
+.label,
+.section-label{
   color:#d81b60;
   text-transform:uppercase;
   letter-spacing:2px;
@@ -140,12 +179,6 @@ body{
   font-family:'Playfair Display', serif;
   font-size:38px;
   margin:10px 0 28px;
-}
-
-.section-text{
-  max-width:760px;
-  margin:auto;
-  line-height:1.8;
 }
 
 .grid{
@@ -184,6 +217,13 @@ body{
   color:white;
 }
 
+.list{
+  text-align:left;
+  max-width:760px;
+  margin:auto;
+  line-height:1.8;
+}
+
 .form{
   max-width:480px;
   margin:0 auto;
@@ -201,10 +241,6 @@ body{
   font-family:'Poppins', sans-serif;
   font-size:15px;
   background:white;
-}
-
-.form textarea{
-  min-height:115px;
 }
 
 .btn{
@@ -225,25 +261,6 @@ body{
   transform:translateY(-3px);
 }
 
-.pay-btn{
-  margin-top:22px;
-}
-
-.price{
-  color:#d81b60;
-  font-weight:700;
-  margin-bottom:24px;
-}
-
-.contact-box{
-  max-width:500px;
-  margin:auto;
-  background:white;
-  padding:28px;
-  border-radius:24px;
-  box-shadow:0 12px 32px rgba(0,0,0,0.08);
-}
-
 .insta{
   display:inline-flex;
   align-items:center;
@@ -252,13 +269,6 @@ body{
   text-decoration:none;
   color:#d81b60;
   font-weight:700;
-}
-
-.insta-icon{
-  width:24px;
-  height:24px;
-  border-radius:8px;
-  background:radial-gradient(circle at 30% 30%,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
 }
 
 .whatsapp{
@@ -280,7 +290,8 @@ body{
 }
 
 @media(max-width:768px){
-  .hero h1{
+  .hero h1,
+  .service-hero h1{
     font-size:36px;
   }
 

@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Empower Her by Jazz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header class="navbar">
-  <img src="images/logo-main.png" class="nav-logo" alt="Empower Her Logo">
+  <img src="images/logo-main.png" class="nav-logo">
 
-  <button class="menu-toggle" id="menuBtn" type="button">☰</button>
+  <button id="menuBtn" class="menu-toggle">☰</button>
 
   <nav id="navLinks">
     <a href="#home">Home</a>
@@ -28,56 +30,86 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
   <div class="hero-card">
-    <img src="images/logo-full.png" class="hero-logo" alt="Empower Her by Jazz">
+
+    <img src="images/logo-full.png" class="hero-logo">
+
     <h1>Empower Her by Jazz</h1>
     <p class="tagline">Heal • Rise • Shine</p>
+
     <a href="#services" class="btn">Explore Services</a>
+
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section">
   <span class="label">About</span>
   <h2>About Me</h2>
-  <p class="section-text">Owner details will be updated soon. This space will share her journey, purpose, and how she helps women heal, rise, and shine.</p>
+
+  <p class="section-text">
+    This space is dedicated to helping women heal emotionally, reconnect with themselves, 
+    and step into their highest, most empowered version. Full story coming soon...
+  </p>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section soft">
   <span class="label">Programs</span>
   <h2>Services</h2>
 
-<div class="grid">
-  <a href="services/personal-coach.html" class="card">💖 1:1 Personal Coaching</a>
-  <a href="services/empower-her.html" class="card">EMPOWER HER™</a>
-  <a href="services/relationship.html" class="card">Relationship Mastery</a>
-  <a href="services/inner-awakening.html" class="card">Inner Awakening™</a>
-  <a href="services/magnetic.html" class="card highlight">Magnetic Woman Code™</a>
-</div>
-</section>
-
-<section id="why" class="section">
-  <span class="label">Why Choose Us</span>
-  <h2>Why Choose Empower Her by Jazz?</h2>
-
   <div class="grid">
-    <div class="card">Safe, confidential and supportive space</div>
-    <div class="card">Women-focused emotional healing approach</div>
-    <div class="card">Practical tools for real-life transformation</div>
+
+    <a href="services/personal-coach.html" class="card">
+      💖 1:1 Personal Coaching
+    </a>
+
+    <a href="services/empower-her.html" class="card">
+      EMPOWER HER™
+    </a>
+
+    <a href="services/relationship.html" class="card">
+      Relationship Mastery
+    </a>
+
+    <a href="services/inner-awakening.html" class="card">
+      Inner Awakening™
+    </a>
+
+    <a href="services/magnetic.html" class="card highlight">
+      Magnetic Woman Code™
+    </a>
+
   </div>
 </section>
 
+<!-- WHY -->
+<section id="why" class="section">
+  <span class="label">Why Choose Us</span>
+  <h2>Why Empower Her by Jazz?</h2>
+
+  <div class="grid">
+    <div class="card">Safe & Non-judgmental Space</div>
+    <div class="card">Deep Emotional Healing Approach</div>
+    <div class="card">Real-Life Transformation Tools</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
 <section id="testimonials" class="section soft">
   <span class="label">Client Love</span>
   <h2>Testimonials</h2>
 
   <div class="grid">
-    <div class="card">“I felt emotionally lighter and more confident.”</div>
-    <div class="card">“The session helped me understand myself deeply.”</div>
-    <div class="card">“I finally felt heard, supported, and guided.”</div>
+    <div class="card">“I feel more confident and calm now.”</div>
+    <div class="card">“This changed my emotional life.”</div>
+    <div class="card">“Finally understood myself deeply.”</div>
   </div>
 </section>
 
+<!-- ENQUIRY -->
 <section id="enquiry" class="section">
   <span class="label">Need Help?</span>
   <h2>Enquiry Form</h2>
@@ -87,44 +119,47 @@
     <input type="email" name="email" placeholder="Your Email" required>
     <input type="tel" name="phone" placeholder="Phone Number">
     <textarea name="message" placeholder="Your Query"></textarea>
-    <button class="btn" type="submit">Submit Enquiry</button>
+    <button class="btn">Submit</button>
   </form>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section soft">
   <span class="label">Connect</span>
   <h2>Contact Info</h2>
 
-  <div class="contact-box">
-    <p>📞 97117-71383</p>
-    <p>📞 70044-53676</p>
-    <p>📧 example@gmail.com</p>
+  <p>📞 97117-71383</p>
+  <p>📞 70044-53676</p>
 
-    <a class="insta" href="https://www.instagram.com/empowerherbyjazz?igsh=YXNoMzhrZHA4aTlt" target="_blank">
-      <span class="insta-icon"></span>
-      @empowerherbyjazz
-    </a>
-  </div>
+  <p>📧 example@gmail.com</p>
+
+  <a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="insta">
+    Instagram
+  </a>
 </section>
 
+<!-- BOOK -->
 <section id="booking" class="section booking">
   <span class="label">Secure Your Spot</span>
   <h2>Book Your Spot</h2>
-  <p class="price">Empower Her™ Live Session — ₹999 Only</p>
+
+  <p class="price">Empower Her™ Session — ₹999</p>
 
   <form id="bookingForm" class="form">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
-    <textarea name="message" placeholder="Which service do you want to book?"></textarea>
-    <button class="btn" type="submit">Submit Booking</button>
+    <textarea name="message" placeholder="Which service?"></textarea>
+    <button class="btn">Submit</button>
   </form>
 
-  <button class="btn pay-btn" type="button" onclick="payNow()">Pay ₹999</button>
+  <button onclick="payNow()" class="btn pay-btn">Pay Now</button>
+
 </section>
 
-<a class="whatsapp" href="https://wa.me/919711771383?text=Hi%2C%20I%20want%20to%20book%20a%20coaching%20session." target="_blank">💬</a>
+<a href="https://wa.me/919711771383" class="whatsapp">💬</a>
 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
