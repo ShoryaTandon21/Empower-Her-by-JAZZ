@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function(){
     form.addEventListener("submit", function(e){
       e.preventDefault();
 
+      const submitBtn = form.querySelector("button");
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+
       fetch(scriptURL, {
         method: "POST",
         body: new FormData(form)
@@ -34,6 +38,10 @@ document.addEventListener("DOMContentLoaded", function(){
       })
       .catch(() => {
         alert("Something went wrong. Please try again.");
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerText = formId === "bookingForm" ? "Submit Booking" : "Submit Enquiry";
       });
     });
   }
@@ -55,8 +63,9 @@ function payNow(){
     currency: "INR",
     name: "Empower Her by Jazz",
     description: "Book Your Spot",
-    handler: function(){
-      alert("Payment successful!");
+    handler: function(response){
+      alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+      window.open("https://wa.me/919711771383?text=Hi%2C%20I%20have%20completed%20the%20payment%20for%20Empower%20Her%20session.", "_blank");
     },
     prefill: {
       contact: "9711771383"
