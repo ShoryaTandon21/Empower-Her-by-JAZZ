@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function(){
     slides[index].style.display="block";
     index = (index+1)%slides.length;
   }
+  function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
 
   showSlide();
   setInterval(showSlide,3000);
