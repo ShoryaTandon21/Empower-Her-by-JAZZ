@@ -1,8 +1,8 @@
 body{
   margin:0;
   font-family:Poppins;
-  background:linear-gradient(#fff0f5,#ffe4ec);
-  color:#333;
+  background:#fff;
+  color:#222;
 }
 
 /* NAVBAR */
@@ -12,28 +12,24 @@ body{
   padding:15px 25px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  background:white;
-  z-index:999;
+  background:#fff;
+  z-index:1000;
 }
 
-.nav-logo{ height:40px; }
-
-/* MENU BUTTON */
 .menu-toggle{
   font-size:30px;
   cursor:pointer;
-  color:#d81b60;
 }
 
-/* SIDE MENU */
+/* MENU */
 .nav-links{
   position:fixed;
   top:0;
   right:-100%;
   width:250px;
   height:100%;
-  background:white;
+  background:#111;
+  color:white;
   display:flex;
   flex-direction:column;
   padding-top:80px;
@@ -46,30 +42,32 @@ body{
 
 .nav-links li{
   padding:15px;
-  cursor:pointer;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
 }
 
 /* HERO */
 .hero{
   height:100vh;
   position:relative;
-  overflow:hidden;
 }
 
-.slider img{
+.slide{
   position:absolute;
   width:100%;
   height:100%;
   object-fit:cover;
+  display:none;
 }
-
-.slide{ display:none; }
 
 .overlay{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(255,255,255,0.3);
+  background:rgba(0,0,0,0.4);
 }
 
 .hero-content{
@@ -77,29 +75,26 @@ body{
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+  color:white;
   text-align:center;
 }
 
-.hero-logo{ width:120px; }
-
-/* BUTTON */
 .btn{
-  padding:12px 25px;
   background:#d81b60;
+  padding:10px 20px;
   color:white;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
+  border-radius:6px;
+  text-decoration:none;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section{
   padding:100px 20px;
   text-align:center;
 }
 
-.alt{
-  background:white;
+.dark{
+  background:#f8d7e0;
 }
 
 /* GRID */
@@ -113,34 +108,39 @@ body{
 .card{
   background:white;
   padding:20px;
-  border-radius:12px;
+  border-radius:10px;
   text-decoration:none;
   color:#333;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
   transition:0.3s;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 .card:hover{
   transform:translateY(-10px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* INSTAGRAM */
+/* FORM */
+.form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* INSTA */
 .insta{
   display:flex;
   justify-content:center;
-  align-items:center;
   gap:10px;
-  text-decoration:none;
   color:#d81b60;
-  font-weight:600;
+  text-decoration:none;
 }
 
 .insta-icon{
   width:20px;
   height:20px;
-  background:radial-gradient(circle,#feda75,#d62976,#4f5bd5);
-  border-radius:6px;
+  background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);
 }
 
 /* WHATSAPP */
@@ -151,5 +151,4 @@ body{
   background:#25D366;
   padding:15px;
   border-radius:50%;
-  color:white;
 }
