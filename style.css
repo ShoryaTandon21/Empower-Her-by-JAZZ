@@ -1,7 +1,7 @@
 body{
   margin:0;
   font-family:Poppins;
-  background:#fff0f5;
+  background:linear-gradient(#fff0f5,#ffe4ec);
   color:#333;
 }
 
@@ -18,18 +18,19 @@ body{
 
 .nav-logo{ height:40px; }
 
+/* 3 LINES FIX */
 .menu-toggle{
-  font-size:30px;
+  font-size:32px;
   color:#d81b60;
   cursor:pointer;
 }
 
-/* MENU */
+/* SLIDE MENU */
 .nav-links{
   position:fixed;
   top:0;
   right:-100%;
-  width:250px;
+  width:260px;
   height:100%;
   background:white;
   display:flex;
@@ -85,12 +86,21 @@ body{
   color:white;
   border:none;
   border-radius:8px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#ad1457;
 }
 
 /* SECTION */
 .section{
   padding:100px 20px;
   text-align:center;
+}
+
+.alt{
+  background:#fff;
 }
 
 /* GRID */
@@ -100,27 +110,38 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 }
 
-/* CARD */
+/* CARDS */
 .card{
   background:white;
   padding:20px;
   border-radius:12px;
-  transition:0.3s;
+  transition:0.4s;
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  text-decoration:none;
+  color:#333;
 }
 
 .card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-12px) scale(1.02);
   box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* FORM */
-.form{
-  max-width:400px;
-  margin:auto;
+/* INSTAGRAM ICON (NO CDN) */
+.insta{
   display:flex;
-  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   gap:10px;
+  text-decoration:none;
+  color:#d81b60;
+  font-weight:600;
+}
+
+.insta-icon{
+  width:20px;
+  height:20px;
+  background:radial-gradient(circle at 30% 30%,#fdf497,#fd5949,#d6249f,#285AEB);
+  border-radius:6px;
 }
 
 /* WHATSAPP */
