@@ -1,42 +1,71 @@
-function scrollToForm(){
-  document.getElementById("formSection").scrollIntoView({behavior:"smooth"});
-}
+document.addEventListener("DOMContentLoaded", function(){
 
-// GOOGLE SHEET API (optional)
-async function saveToSheet(data){
-  fetch("YOUR_GOOGLE_SCRIPT_URL", {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
-}
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
 
-// RAZORPAY PAYMENT
+  if(menuBtn && navLinks){
+    menuBtn.addEventListener("click", function(){
+      navLinks.classList.toggle("active");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function(){
+        navLinks.classList.remove("active");
+      });
+    });
+  }
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwWUZWRLr7ncGtT-cVdQQy8_a04d1kluRQvyCQ6e_Nvzfk3wv8ThTcV3-Wf-Fmz0hl4cA/exec";
+
+  function connectForm(formId, successMessage){
+    const form = document.getElementById(formId);
+    if(!form) return;
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form)
+      })
+      .then(() => {
+        alert(successMessage);
+        form.reset();
+      })
+      .catch(() => {
+        alert("Something went wrong. Please try again.");
+      });
+    });
+  }
+
+  connectForm("enquiryForm", "Enquiry submitted successfully!");
+  connectForm("bookingForm", "Booking details submitted successfully!");
+
+});
+
 function payNow(){
-
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
-
-  if(!name || !email || !phone){
-    alert("Please fill all details");
+  if(typeof Razorpay === "undefined"){
+    alert("Payment gateway loading. Please try again in a few seconds.");
     return;
   }
 
-  var options = {
-    "key": "YOUR_RAZORPAY_KEY",
-    "amount": 99900,
-    "currency": "INR",
-    "name": "Empower Her™",
-    "description": "Transformational Session",
-    "handler": function (response){
-        alert("Payment Successful!");
-
-        saveToSheet({name,email,phone,paymentId:response.razorpay_payment_id});
-
-        window.location.href = "thankyou.html";
+  const options = {
+    key: "rzp_test_1234567890",
+    amount: 99900,
+    currency: "INR",
+    name: "Empower Her by Jazz",
+    description: "Book Your Spot",
+    handler: function(){
+      alert("Payment successful!");
+    },
+    prefill: {
+      contact: "9711771383"
+    },
+    theme: {
+      color: "#d81b60"
     }
   };
 
-  var rzp = new Razorpay(options);
+  const rzp = new Razorpay(options);
   rzp.open();
 }

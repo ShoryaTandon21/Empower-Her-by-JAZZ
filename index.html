@@ -2,85 +2,129 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Empower Her™</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empower Her by Jazz</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<!-- Razorpay -->
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
 </head>
+
 <body>
 
-<header>
-  <h1>EMPOWER HER™</h1>
-  <p>Step Into Your Highest Self ✨</p>
+<header class="navbar">
+  <img src="images/logo-main.png" class="nav-logo" alt="Empower Her Logo">
+
+  <button class="menu-toggle" id="menuBtn" type="button">☰</button>
+
+  <nav id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#enquiry">Enquiry</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking">Book</a>
+  </nav>
 </header>
 
-<section class="hero">
-  <h2>3-Hour Live Online Transformational Session for Women</h2>
-  <h3>💖 Special Price: ₹999/- Only</h3>
-  <button onclick="scrollToForm()">Join Transformation Now</button>
-</section>
-
-<section class="pain">
-  <h2>Are You Feeling Stuck?</h2>
-  <ul>
-    <li>Overthinking & emotional exhaustion</li>
-    <li>Low self-worth & confidence issues</li>
-    <li>Fear, guilt, shame or anger</li>
-    <li>Feeling stuck in life cycles</li>
-  </ul>
-</section>
-
-<section class="about">
-  <h2>What is Empower Her™?</h2>
-  <p>
-    A deep 3-hour identity transformation session designed to help women move
-    from emotional chaos → emotional mastery → empowered self.
-  </p>
-</section>
-
-<section class="learn">
-  <h2>What You Will Learn</h2>
-  <p>✔ 30 Empowered Woman Qualities</p>
-  <p>✔ Emotional Mastery Framework</p>
-  <p>✔ E + R = O Life Formula</p>
-  <p>✔ Identity Transformation System</p>
-</section>
-
-<section class="services">
-  <h2>Transformation Outcomes</h2>
-  <div class="cards">
-    <div>Calm Mindset</div>
-    <div>Emotional Control</div>
-    <div>Confidence Boost</div>
-    <div>Self Worth Healing</div>
+<section id="home" class="hero">
+  <div class="hero-card">
+    <img src="images/logo-full.png" class="hero-logo" alt="Empower Her by Jazz">
+    <h1>Empower Her by Jazz</h1>
+    <p class="tagline">Heal • Rise • Shine</p>
+    <a href="#services" class="btn">Explore Services</a>
   </div>
 </section>
 
-<section class="testimonials">
-  <h2>Real Transformations</h2>
-  <div class="review">"I feel like a new person after this session." – A</div>
-  <div class="review">"My overthinking is gone." – S</div>
-  <div class="review">"I finally feel in control of my emotions." – R</div>
+<section id="about" class="section">
+  <span class="label">About</span>
+  <h2>About Me</h2>
+  <p class="section-text">Owner details will be updated soon. This space will share her journey, purpose, and how she helps women heal, rise, and shine.</p>
 </section>
 
-<section id="formSection">
-  <h2>Book Your Seat</h2>
+<section id="services" class="section soft">
+  <span class="label">Programs</span>
+  <h2>Services</h2>
 
-  <input type="text" id="name" placeholder="Your Name">
-  <input type="email" id="email" placeholder="Email">
-  <input type="tel" id="phone" placeholder="Phone Number">
-
-  <button onclick="payNow()">Pay ₹999 & Join</button>
+<div class="grid">
+  <a href="services/personal-coach.html" class="card">💖 1:1 Personal Coaching</a>
+  <a href="services/empower-her.html" class="card">EMPOWER HER™</a>
+  <a href="services/relationship.html" class="card">Relationship Mastery</a>
+  <a href="services/inner-awakening.html" class="card">Inner Awakening™</a>
+  <a href="services/magnetic.html" class="card highlight">Magnetic Woman Code™</a>
+</div>
 </section>
 
-<footer>
-  <p>© Empower Her™ | Transforming Women Lives</p>
-</footer>
+<section id="why" class="section">
+  <span class="label">Why Choose Us</span>
+  <h2>Why Choose Empower Her by Jazz?</h2>
 
+  <div class="grid">
+    <div class="card">Safe, confidential and supportive space</div>
+    <div class="card">Women-focused emotional healing approach</div>
+    <div class="card">Practical tools for real-life transformation</div>
+  </div>
+</section>
+
+<section id="testimonials" class="section soft">
+  <span class="label">Client Love</span>
+  <h2>Testimonials</h2>
+
+  <div class="grid">
+    <div class="card">“I felt emotionally lighter and more confident.”</div>
+    <div class="card">“The session helped me understand myself deeply.”</div>
+    <div class="card">“I finally felt heard, supported, and guided.”</div>
+  </div>
+</section>
+
+<section id="enquiry" class="section">
+  <span class="label">Need Help?</span>
+  <h2>Enquiry Form</h2>
+
+  <form id="enquiryForm" class="form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Phone Number">
+    <textarea name="message" placeholder="Your Query"></textarea>
+    <button class="btn" type="submit">Submit Enquiry</button>
+  </form>
+</section>
+
+<section id="contact" class="section soft">
+  <span class="label">Connect</span>
+  <h2>Contact Info</h2>
+
+  <div class="contact-box">
+    <p>📞 97117-71383</p>
+    <p>📞 70044-53676</p>
+    <p>📧 example@gmail.com</p>
+
+    <a class="insta" href="https://www.instagram.com/empowerherbyjazz?igsh=YXNoMzhrZHA4aTlt" target="_blank">
+      <span class="insta-icon"></span>
+      @empowerherbyjazz
+    </a>
+  </div>
+</section>
+
+<section id="booking" class="section booking">
+  <span class="label">Secure Your Spot</span>
+  <h2>Book Your Spot</h2>
+  <p class="price">Empower Her™ Live Session — ₹999 Only</p>
+
+  <form id="bookingForm" class="form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" placeholder="Which service do you want to book?"></textarea>
+    <button class="btn" type="submit">Submit Booking</button>
+  </form>
+
+  <button class="btn pay-btn" type="button" onclick="payNow()">Pay ₹999</button>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919711771383?text=Hi%2C%20I%20want%20to%20book%20a%20coaching%20session." target="_blank">💬</a>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
