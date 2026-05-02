@@ -1,60 +1,11 @@
-body{
-  margin:0;
-  font-family:Poppins;
-  background:#fff;
-  color:#222;
-}
-
-/* NAVBAR */
-.navbar{
-  position:fixed;
-  width:100%;
-  padding:15px 25px;
-  display:flex;
-  justify-content:space-between;
-  background:#fff;
-  z-index:1000;
-}
-
-.menu-toggle{
-  font-size:30px;
-  cursor:pointer;
-}
-
-/* MENU */
-.nav-links{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:250px;
-  height:100%;
-  background:#111;
-  color:white;
-  display:flex;
-  flex-direction:column;
-  padding-top:80px;
-  transition:0.4s;
-}
-
-.nav-links.active{
-  right:0;
-}
-
-.nav-links li{
-  padding:15px;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-}
-
-/* HERO */
+/* HERO FIX */
 .hero{
   height:100vh;
   position:relative;
+  overflow:hidden;
 }
 
+/* SLIDER */
 .slide{
   position:absolute;
   width:100%;
@@ -63,92 +14,55 @@ body{
   display:none;
 }
 
+/* OVERLAY */
 .overlay{
   position:absolute;
   width:100%;
   height:100%;
   background:rgba(0,0,0,0.4);
+  z-index:1;
 }
 
+/* HERO CONTENT FIX */
 .hero-content{
-  position:absolute;
+  position:relative;
+  z-index:2;
+  text-align:center;
   top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  transform:translateY(-50%);
   color:white;
-  text-align:center;
 }
 
-.btn{
-  background:#d81b60;
-  padding:10px 20px;
-  color:white;
-  border-radius:6px;
-  text-decoration:none;
+/* 🔥 LOGO FIX (MAIN ISSUE) */
+.hero-logo{
+  width:120px;
+  margin-bottom:15px;
+  position:relative;   /* REMOVE absolute */
 }
 
-/* SECTIONS */
-.section{
-  padding:100px 20px;
-  text-align:center;
-}
-
-.dark{
-  background:#f8d7e0;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  gap:20px;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-}
-
-/* CARD */
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  text-decoration:none;
-  color:#333;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-}
-
-/* FORM */
-.form{
-  max-width:400px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-/* INSTA */
-.insta{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  color:#d81b60;
-  text-decoration:none;
-}
-
-.insta-icon{
-  width:20px;
-  height:20px;
-  background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);
-}
-
-/* WHATSAPP */
-.whatsapp{
+/* NAVBAR FIX */
+.navbar{
   position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50%;
+  width:100%;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  background:white;
+  z-index:9999;
+}
+
+/* MENU FIX */
+.nav-links{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:260px;
+  height:100%;
+  background:#111;
+  z-index:9998;
+  transition:0.4s;
+}
+
+.nav-links.active{
+  right:0;
 }
