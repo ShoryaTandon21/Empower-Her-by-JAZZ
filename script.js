@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  // MENU
   window.toggleMenu = function(){
     document.getElementById("navLinks").classList.toggle("active");
   }
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function(){
     window.open("https://wa.me/919711771383");
   }
 
-  // SLIDER
   let slides = document.querySelectorAll(".slide");
   let index = 0;
 
@@ -25,14 +23,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
   showSlide();
   setInterval(showSlide, 3000);
-
-  // GSAP
-  gsap.from(".hero-content", {opacity:0, y:50, duration:1});
-  gsap.from(".card", {
-    scrollTrigger:".card",
-    opacity:0,
-    y:40,
-    stagger:0.2
-  });
 
 });
