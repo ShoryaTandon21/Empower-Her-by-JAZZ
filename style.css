@@ -14,17 +14,19 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index:1000;
+  z-index:9999; /* 🔥 HIGH FIX */
 }
 
 .logo{ height:40px; }
 
-/* MENU */
+/* MENU BUTTON */
 .menu-toggle{
-  font-size:28px;
+  font-size:30px;
   cursor:pointer;
+  z-index:10000;
 }
 
+/* MENU */
 #navLinks{
   position:fixed;
   right:-100%;
@@ -36,9 +38,12 @@ body{
   flex-direction:column;
   padding-top:80px;
   transition:0.4s;
+  z-index:9998;
 }
 
-#navLinks.active{ right:0; }
+#navLinks.active{
+  right:0;
+}
 
 #navLinks a{
   color:white;
@@ -62,13 +67,15 @@ body{
 
 .hero-inner{
   position:relative;
-  text-align:center;
   top:50%;
   transform:translateY(-50%);
+  text-align:center;
   color:white;
 }
 
-.hero-logo{ width:110px; }
+.hero-logo{
+  width:110px;
+}
 
 /* SECTION */
 .section{
@@ -99,7 +106,7 @@ body{
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.02);
+  transform:translateY(-10px);
 }
 
 /* FORM */
@@ -140,10 +147,22 @@ input, textarea{
 .fade{
   opacity:0;
   transform:translateY(40px);
-  transition:1s ease;
+  transition:1s;
 }
 
 .fade.show{
   opacity:1;
   transform:translateY(0);
+  .list{
+  text-align:left;
+  max-width:600px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.price{
+  font-size:20px;
+  color:#d81b60;
+  margin:15px 0;
+}
 }

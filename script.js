@@ -1,8 +1,9 @@
-function toggleMenu(){
+// MENU FIX (100% WORKING)
+document.getElementById("menuBtn").addEventListener("click", function(){
   document.getElementById("navLinks").classList.toggle("active");
-}
+});
 
-/* SCROLL ANIMATION */
+// SCROLL ANIMATION
 const faders = document.querySelectorAll('.fade');
 
 window.addEventListener('scroll', () => {
