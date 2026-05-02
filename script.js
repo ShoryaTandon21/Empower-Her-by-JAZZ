@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwWUZWRLr7ncGtT-cVdQQy8_a04d1kluRQvyCQ6e_Nvzfk3wv8ThTcV3-Wf-Fmz0hl4cA/exec";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzKKiQrxgLUecSnx8Q7FBCkFmXkWl6LD4bx5JPYWHCgT77_MqeDLsEtrL6gITmAuvYX5w/exec";
 
   function connectForm(formId, successMessage){
     const form = document.getElementById(formId);
