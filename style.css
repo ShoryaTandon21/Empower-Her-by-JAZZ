@@ -12,25 +12,26 @@ body{
   padding:15px 25px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   background:white;
-  z-index:9999;
+  z-index:999;
 }
 
 .nav-logo{ height:40px; }
 
-/* 3 LINES FIX */
+/* MENU BUTTON */
 .menu-toggle{
-  font-size:32px;
-  color:#d81b60;
+  font-size:30px;
   cursor:pointer;
+  color:#d81b60;
 }
 
-/* SLIDE MENU */
+/* SIDE MENU */
 .nav-links{
   position:fixed;
   top:0;
   right:-100%;
-  width:260px;
+  width:250px;
   height:100%;
   background:white;
   display:flex;
@@ -79,6 +80,8 @@ body{
   text-align:center;
 }
 
+.hero-logo{ width:120px; }
+
 /* BUTTON */
 .btn{
   padding:12px 25px;
@@ -86,11 +89,7 @@ body{
   color:white;
   border:none;
   border-radius:8px;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#ad1457;
+  cursor:pointer;
 }
 
 /* SECTION */
@@ -100,7 +99,7 @@ body{
 }
 
 .alt{
-  background:#fff;
+  background:white;
 }
 
 /* GRID */
@@ -110,23 +109,23 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 }
 
-/* CARDS */
+/* CARD */
 .card{
   background:white;
   padding:20px;
   border-radius:12px;
-  transition:0.4s;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
   text-decoration:none;
   color:#333;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 .card:hover{
-  transform:translateY(-12px) scale(1.02);
+  transform:translateY(-10px);
   box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* INSTAGRAM ICON (NO CDN) */
+/* INSTAGRAM */
 .insta{
   display:flex;
   justify-content:center;
@@ -140,7 +139,7 @@ body{
 .insta-icon{
   width:20px;
   height:20px;
-  background:radial-gradient(circle at 30% 30%,#fdf497,#fd5949,#d6249f,#285AEB);
+  background:radial-gradient(circle,#feda75,#d62976,#4f5bd5);
   border-radius:6px;
 }
 

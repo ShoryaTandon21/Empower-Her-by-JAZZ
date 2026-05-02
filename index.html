@@ -8,18 +8,17 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <img src="/images/logo-main.png" class="nav-logo">
+  <img src="images/logo-main.png" class="nav-logo">
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <ul id="navLinks" class="nav-links">
-    <li onclick="scrollToSection('about')">About</li>
     <li onclick="scrollToSection('services')">Services</li>
     <li onclick="scrollToSection('testimonials')">Testimonials</li>
     <li onclick="scrollToSection('contact')">Contact</li>
@@ -30,15 +29,15 @@
 <section class="hero">
 
   <div class="slider">
-    <img src="/images/bg1.png" class="slide">
-    <img src="/images/bg2.png" class="slide">
-    <img src="/images/bg3.png" class="slide">
+    <img src="images/bg1.png" class="slide">
+    <img src="images/bg2.png" class="slide">
+    <img src="images/bg3.png" class="slide">
   </div>
 
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <img src="/images/logo-full.png" class="hero-logo">
+    <img src="images/logo-full.png" class="hero-logo">
     <h1>Empower Her by Jazz</h1>
     <p class="tagline">Heal • Rise • Shine</p>
     <button class="btn" onclick="scrollToSection('services')">Explore Services</button>
@@ -51,11 +50,11 @@
   <h2>Our Services</h2>
 
   <div class="grid">
-    <a href="/services/personal-coach.html" class="card">1:1 Personal Coach</a>
-    <a href="/services/empower-her.html" class="card highlight">Empower Her</a>
-    <a href="/services/relationship.html" class="card">Relationship Mastery</a>
-    <a href="/services/awakening.html" class="card">Inner Awakening</a>
-    <a href="/services/magnetic.html" class="card">Magnetic Women Code</a>
+    <a href="services/personal-coach.html" class="card">1:1 Personal Coach</a>
+    <a href="services/empower-her.html" class="card highlight">Empower Her</a>
+    <a href="services/relationship.html" class="card">Relationship Mastery</a>
+    <a href="services/awakening.html" class="card">Inner Awakening</a>
+    <a href="services/magnetic.html" class="card">Magnetic Women Code</a>
   </div>
 </section>
 
@@ -77,11 +76,12 @@
   <p>📞 70044-53676</p>
 
   <a href="https://www.instagram.com/empowerherbyjazz" target="_blank" class="insta">
-    <span class="insta-icon"></span>
+    <div class="insta-icon"></div>
     @empowerherbyjazz
   </a>
 </section>
 
+<!-- WHATSAPP -->
 <a onclick="openWhatsApp()" class="whatsapp">💬</a>
 
 <script src="script.js"></script>
